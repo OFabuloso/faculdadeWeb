@@ -1,0 +1,139 @@
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+header h1 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Estilos do formulário */
+#signoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#signoForm label {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+#signoForm input[type="date"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#signoForm input[type="date"]:focus {
+    border-color: #0056b3;
+}
+
+#signoForm button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#signoForm button:hover {
+    background-color: #0056b3;
+}
+
+/* ========================================= */
+/* ESTILOS DA ÁREA DE RESULTADO (ATUALIZADO) */
+/* ========================================= */
+
+#resultado {
+    background-color: #e9f5ff;
+    border-left: 5px solid #007bff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    
+    /* O resultado começa escondido */
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    
+    /* Transições suaves para a aparição */
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out, visibility 0.5s;
+
+    /* Novas regras de Flexbox para alinhar imagem e texto */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#resultado.show {
+    /* Faz o resultado aparecer */
+    visibility: visible;
+    opacity: 1;
+    max-height: 500px; /* Altura máxima para permitir a transição */
+}
+
+#resultado h2 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+#resultado p {
+    line-height: 1.6;
+}
+
+/* Estilo para a imagem do signo */
+.signo-imagem {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #007bff;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+/* Container para as informações de texto */
+.signo-info {
+    flex: 1; /* Ocupa o espaço restante */
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #999;
+}
